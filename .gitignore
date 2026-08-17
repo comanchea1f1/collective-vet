@@ -16,6 +16,11 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 .idea
+
+# Secrets — never commit
+workspace-admin/credentials/
+*.json.key
+service-account*.json
 .DS_Store
 *.suo
 *.ntvs*

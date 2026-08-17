@@ -1,0 +1,72 @@
+# Collective Vet org automation config.
+# Edit every value marked <EDIT> before running.
+
+org:
+  name: Collective Vet
+  domain: collectivevet.org        # <EDIT> if the registered domain differs
+  admin_email: admin@collectivevet.org   # <EDIT> super-admin the service account impersonates
+  customer_id: my_customer          # 'my_customer' works once delegation is set
+
+service_account_key: credentials/service-account.json
+
+# Organizational units (created under /)
+org_units:
+  - /Staff
+  - /Coordinators
+  - /Volunteers
+  - /Veterans-Services
+  - /Service-Accounts
+
+# Google Groups (mailing lists / ACL handles)
+groups:
+  - email: all@collectivevet.org
+    name: Collective Vet — All
+    description: Every staff member, coordinator, and volunteer.
+  - email: coordinators@collectivevet.org
+    name: Case Coordinators
+    description: Staff who manage veteran cases and shared drives.
+  - email: claims@collectivevet.org
+    name: Claims Assistance Team
+    description: Volunteers helping with claims paperwork education.
+  - email: legal@collectivevet.org
+    name: Legal Aid Referrals
+    description: Volunteers routing veterans to accredited legal aid.
+  - email: intake@collectivevet.org
+    name: Intake Desk
+    description: Receives new intake form notifications.
+
+# Starter users. Passwords are temp-only; change_temporary_password forces reset.
+users:
+  - primary_email: coordinator@collectivevet.org   # <EDIT>
+    given_name: Case
+    family_name: Coordinator
+    org_unit: /Coordinators
+    groups: [coordinators@collectivevet.org, intake@collectivevet.org, all@collectivevet.org]
+  - primary_email: claims-lead@collectivevet.org   # <EDIT>
+    given_name: Claims
+    family_name: Lead
+    org_unit: /Veterans-Services
+    groups: [claims@collectivevet.org, all@collectivevet.org]
+
+# Shared drives and their standard folder tree.
+shared_drives:
+  - name: Collective Vet — Operations
+    managers: [coordinators@collectivevet.org]
+    content_managers: [all@collectivevet.org]
+    folders:
+      - Policies and SOPs
+      - Board and Finance/Minutes
+      - Board and Finance/Annual Filings
+      - Grants and Fundraising
+      - Brand and Website
+  - name: Collective Vet — Veteran Cases
+    managers: [coordinators@collectivevet.org]
+    content_managers: [claims@collectivevet.org, legal@collectivevet.org]
+    folders:
+      - _Templates
+      - _Templates/Claims Packet
+      - _Templates/Credit Education Packet
+      - _Templates/Legal Aid Referral
+      - Intake Queue
+      - Active Cases
+      - Closed Cases
