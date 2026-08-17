@@ -1,3 +1,5 @@
+import { AssistDesk } from "./assist";
+
 const programs = [
   {
     code: "PEER",
@@ -59,6 +61,7 @@ export default function App() {
         <nav className="plate-nav" aria-label="Primary">
           <a href="#mission">Mission</a>
           <a href="#programs">Programs</a>
+          <a href="#assist">Briefing desk</a>
           <a href="#rally">Rally point</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -135,6 +138,8 @@ export default function App() {
               ))}
             </ul>
           </section>
+
+          <AssistDesk />
 
           <section id="rally" className="rally">
             <div>

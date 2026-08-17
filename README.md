@@ -2,7 +2,9 @@
 
 Public website for **Collective Vet**, a veterans nonprofit.
 
-This site is an online presence only. It does not collect financial accounts, scan devices, or store identity documents.
+This site is an online presence only. It does not collect financial accounts, scan devices, store identity documents, file VA claims, or restructure credit.
+
+The briefing desk is a local checklist generator with official public links. It is not legal, financial, medical, or claims representation.
 
 ## Local
 
