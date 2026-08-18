@@ -158,6 +158,11 @@
   border-bottom-color: var(--ink);
 }
 
+.plate-nav a.is-active {
+  border-bottom-color: var(--ink);
+  font-weight: 700;
+}
+
 .deck {
   display: grid;
   grid-template-columns: 3rem 1fr;
@@ -243,6 +248,15 @@ main {
 .assist,
 .rally,
 .contact {
+  margin-top: 4.5rem;
+}
+
+.page-lead,
+.page-lead > section:first-child {
+  margin-top: 0;
+}
+
+.page-lead .contact {
   margin-top: 4.5rem;
 }
 
@@ -414,6 +428,91 @@ main {
   font-size: 1.7rem;
 }
 
+.program-more {
+  color: var(--sage);
+  font-size: 0.95rem;
+}
+
+.resource-section {
+  margin-top: 3rem;
+}
+
+.resource-head h3 {
+  font-size: 2rem;
+  margin: 0.3rem 0 0.5rem;
+}
+
+.resource-head p {
+  max-width: 40rem;
+  margin: 0;
+}
+
+.resource-list {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .resource-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.resource {
+  background: #f4f7f8;
+  padding: 1.1rem 1.15rem 1.25rem;
+  border-left: 4px solid var(--brass);
+}
+
+.resource a {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.resource p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+}
+
+.donate-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  .donate-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.donate-card {
+  background: #f4f7f8;
+  padding: 1.1rem 1.15rem 1.25rem;
+  border-left: 4px solid var(--brass);
+}
+
+.donate-card h3 {
+  font-size: 1.7rem;
+  margin: 0 0 0.5rem;
+}
+
+.donate-card p {
+  margin: 0.5rem 0;
+}
+
+.donate-card address {
+  font-style: normal;
+  margin-top: 0.75rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.82rem;
+}
+
 .rally {
   display: grid;
   gap: 1.5rem;
@@ -461,6 +560,7 @@ main {
 }
 
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
   font: inherit;
   text-transform: none;
